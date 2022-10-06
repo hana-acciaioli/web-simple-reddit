@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    font-family: var(--primary-font);
+    color: var(--text-color);
+    background: var(--background);
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 500px auto;
+    background-color: rgb(208, 220, 231);
+}
+
+.search-div {
+    object-fit: cover;
+}
+
+#title {
+    font: red;
+}
+li {
+    display: grid;
+    background-color: white;
+    grid-template-rows: minmax(50px, auto) auto auto auto;
+}
+
+li img {
+    min-width: 100%;
+    object-fit: contain;
+}

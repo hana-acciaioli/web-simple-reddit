@@ -33,6 +33,10 @@ export async function createPost(post) {
     return await client.from('simple_reddit').insert(post);
 }
 
+export async function getPosts() {
+    return await client.from('simple_reddit').select('*');
+}
+
 export async function uploadImage(bucketName, imagePath, imageFile) {
     const bucket = client.storage.from(bucketName);
     const response = await bucket.upload(imagePath, imageFile, {

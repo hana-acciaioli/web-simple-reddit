@@ -25,13 +25,14 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/home.css" />
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header class="page-header">
             <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Supabase Web App</p>
+            <p class="title">little reddit</p>
             <nav>
                 <a href="/">Home</a>
                 <a id="sign-out-link" href="auth">Sign Out</a>
@@ -39,7 +40,21 @@
         </header>
 
         <main>
-            <a href="./create-post/"><input type="text" placeholder="Create a post..." /></a>
+            <section></section>
+            <section id="center-section">
+                <div id="search-div">
+                    <a href="./create-post/"
+                        ><input type="text" placeholder="Create a post..."
+                    /></a>
+                </div>
+                <div>
+                    <p id="error-display"></p>
+                </div>
+                <div id="list-div">
+                    <ul id="post-list"></ul>
+                </div>
+            </section>
+            <section></section>
         </main>
     </body>
 </html>
