@@ -49,3 +49,12 @@ export async function uploadImage(bucketName, imagePath, imageFile) {
     const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
     return url;
 }
+
+export async function getPost(id) {
+    return await client
+        .from('simple_reddit')
+        .select(`*, comments (*)`)
+        .eq('id', id)
+        .order('created_at', { foreignTable: 'comments', ascending: false })
+        .single();
+}

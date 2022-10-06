@@ -1,6 +1,10 @@
 export function renderPost(post) {
     const li = document.createElement('li');
 
+    const detailA = document.createElement('a');
+
+    detailA.href = `/detail-post/?id=${post.id}`;
+
     const img = document.createElement('img');
     img.src = post.image_url;
 
@@ -11,9 +15,10 @@ export function renderPost(post) {
     p.textContent = post.text;
 
     const url = document.createElement('a');
-    url.textContent = post.url;
+    url.href = post.url;
 
-    li.append(h2, img, url);
+    detailA.append(h2, img, url);
+    li.append(detailA);
 
     return li;
 }
