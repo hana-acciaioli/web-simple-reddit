@@ -10,8 +10,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
-
+        <script type="module" src="create-post.js"></script>
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,8 +40,8 @@
                     <input name="title" required placeholder="Enter post title" />
                 </label>
                 <label>
-                    <div>Description</div>
-                    <input name="description" placeholder="Write a detailed description" />
+                    <div>Text</div>
+                    <input name="text" placeholder="Text (optional)" />
                 </label>
                 <label>
                     <div>Link</div>
@@ -50,7 +49,7 @@
                         id="url"
                         name="url"
                         type="url"
-                        placeholder="https://example.com"
+                        placeholder="https://example.com (optional)"
                         pattern="https://.*"
                     />
                 </label>
@@ -69,6 +68,10 @@
                     alt="post preview image"
                     src="../assets/preview-img.png"
                 />
+
+                <button id="add-button">Add Post</button>
+
+                <p id="error-display"></p>
             </form>
         </main>
     </body>
