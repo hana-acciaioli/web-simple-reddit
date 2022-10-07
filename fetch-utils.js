@@ -53,8 +53,8 @@ export async function uploadImage(bucketName, imagePath, imageFile) {
 export async function getPost(id) {
     return await client
         .from('simple_reddit')
-        .select(`*, comments (*)`)
+        .select(`*,  reddit_comments (*)`)
         .eq('id', id)
-        .order('created_at', { foreignTable: 'comments', ascending: false })
+        .order('created_at', { foreignTable: 'reddit_comments', ascending: false })
         .single();
 }
