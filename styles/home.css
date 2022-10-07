@@ -13,8 +13,8 @@ main {
     background-color: rgb(208, 220, 231);
 }
 
-.search-div {
-    object-fit: cover;
+#create-div {
+    min-width: 100%;
 }
 
 #title {
@@ -24,9 +24,11 @@ li {
     display: grid;
     background-color: white;
     grid-template-rows: minmax(50px, auto) auto auto auto;
+    grid-row-gap: 20px;
 }
 
 li img {
     min-width: 100%;
+    max-width: 100%;
     object-fit: contain;
 }
