@@ -58,3 +58,7 @@ export async function getPost(id) {
         .order('created_at', { foreignTable: 'reddit_comments', ascending: false })
         .single();
 }
+
+export async function createComment(comment) {
+    return await client.from('reddit_comments').insert(comment).single();
+}

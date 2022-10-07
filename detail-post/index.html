@@ -32,13 +32,21 @@
             </nav>
         </header>
         <main>
+            <section class="post-detail">
+                <h1 id="post-title">My Pet</h1>
+                <img id="post-image" alt="post image" src="../assets/preview-img.png" />
+                <p id="post-text"></p>
+            </section>
             <p id="error-display"></p>
-                <section class="post-detail">
-                    <h1 id="post-title">My Pet</h1>
-                    <img id="post-image" alt="post image" src="../assets/preview-img.png">
-                    <p id="post-text"></p>
-                </section>
-            </ul>
+
+            <div>
+                <form id="add-comment-form" class="inline">
+                    <label>Comment on post </label>
+
+                    <input name="text" placeholder="add a comment..." />
+                    <button>Submit</button>
+                </form>
+            </div>
         </main>
     </body>
 </html>
