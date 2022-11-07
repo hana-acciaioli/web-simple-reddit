@@ -17,7 +17,7 @@ body {
     color: var(--text-color);
     background: var(--background);
     display: grid;
-    grid-template-rows: auto 1fr;
+    /* grid-template-rows: auto 1fr; */
 }
 
 .page-header {
@@ -42,6 +42,7 @@ body {
     font-size: 1.3em;
     font-weight: 800;
     flex-grow: 2;
+    font-weight: 400;
 }
 
 .page-header nav {

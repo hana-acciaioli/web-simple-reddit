@@ -1,0 +1,17 @@
+#post-detail {
+    text-align: center;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+main {
+    display: grid;
+    text-align: center;
+    width: 100%;
+}
+
+.post-detail img {
+    width: 500px;
+}
